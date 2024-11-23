@@ -11,7 +11,7 @@
             padding: 0;
             text-align: center;
             color: #000; /* Dark black text */
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -50,6 +50,16 @@
             margin-bottom: 20px;
         }
 
+        /* Bio Section */
+        .bio {
+            font-family: Arial, sans-serif; /* Using Arial for the bio text */
+            font-size: 1.2rem;
+            color: #333; /* Dark gray for the bio text */
+            margin-bottom: 40px; /* Space between bio and menu */
+            max-width: 80%;
+            line-height: 1.6;
+        }
+
         /* Menu Section */
         .menu {
             display: flex;
@@ -76,6 +86,17 @@
             background-color: #a9a9a9; /* Darker grey on hover */
         }
 
+        /* Profile Image */
+        .profile-image {
+            margin-top: 40px; /* Space between menu and image */
+        }
+
+        .profile-image img {
+            width: 150px; /* Ensures the image is square */
+            height: 150px; /* Ensures the image is square */
+            object-fit: cover; /* Ensures it doesn't distort */
+        }
+
         /* Adjust layout based on screen size */
         @media (max-width: 1200px) {
             .menu a {
@@ -93,11 +114,22 @@
 <body>
     <h1>Hello, World! From BPK.</h1>
 
+    <!-- Bio Section -->
+    <div class="bio">
+        <p>I'm a data engineer, musician, and artist, passionate about creating innovative solutions and expressive soundscapes. Welcome to my personal website where I share my work, from technical projects to music and visual art.</p>
+    </div>
+
+    <!-- Menu Section -->
     <div class="menu">
         <a href="https://open.spotify.com/playlist/4NI82NZm8ZiIGGlMptxqsn?si=dbb5ea10e83040bd" target="_blank">Discography</a>
-        <a href="https://soundcloud.com/backslashafter" target="_blank">Mixes</a>
-        <a href="https://www.instagram.com/brianpokora/?hl=en" target="_blank">Music</a>
-        <a href="https://www.instagram.com/brianpokora/?hl=en" target="_blank">Art</a>
+        <a href="https://www.mixcloud.com/b_p_k/" target="_blank">Mixes</a>
+        <a href="https://soundcloud.com/backslashafter" target="_blank">Music</a>
+        <a href="https://www.instagram.com/brianpokora/?hl=en" target="_blank">Insta</a>
+    </div>
+
+    <!-- Profile Image Section -->
+    <div class="profile-image">
+        <img src="images/profile-shot.png" alt="Profile Picture">
     </div>
 </body>
 </html>
