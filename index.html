@@ -6,13 +6,14 @@
     <title>Hello World</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Courier New', Courier, monospace; /* Monospace font */
             margin: 0;
             padding: 0;
             text-align: center;
             color: #000; /* Dark black text */
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             position: relative;
@@ -45,10 +46,56 @@
         h1 {
             z-index: 1;
             font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Menu Section */
+        .menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px; /* Space between menu items */
+            margin-top: 20px;
+        }
+
+        .menu a {
+            width: 200px; /* Fixed width to ensure all boxes are the same size */
+            padding: 15px 0; /* Adjust padding for consistent height */
+            font-size: 1rem;
+            text-decoration: none;
+            color: #000; /* Black text */
+            background-color: #d3d3d3; /* Grey background */
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu a:hover {
+            background-color: #a9a9a9; /* Darker grey on hover */
+        }
+
+        /* Adjust layout based on screen size */
+        @media (max-width: 1200px) {
+            .menu a {
+                width: 45%; /* 2 items per row */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu a {
+                width: 90%; /* 1 item per row */
+            }
         }
     </style>
 </head>
 <body>
     <h1>Hello, World! From BPK.</h1>
+
+    <div class="menu">
+        <a href="https://open.spotify.com/playlist/4NI82NZm8ZiIGGlMptxqsn?si=dbb5ea10e83040bd" target="_blank">Discography</a>
+        <a href="https://soundcloud.com/backslashafter" target="_blank">Mixes</a>
+        <a href="https://www.instagram.com/brianpokora/?hl=en" target="_blank">Music</a>
+        <a href="https://www.instagram.com/brianpokora/?hl=en" target="_blank">Art</a>
+    </div>
 </body>
 </html>
